@@ -13,12 +13,22 @@
   padding: 16px;
   background-color: $color-rojo;
   text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  }
 }
 .imagen-producto {
   width: 200px;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+  .producto-list:hover & {
+    transform: scale(1.04);
+  }
 }
 .productos-contenedor {
   display: flex;
@@ -128,7 +138,7 @@
     padding: 10px 24px;
     transition: background-color 0.25s ease, transform 0.15s ease;
     &:hover {
-      background-color: darken($color-rojo, 10%);
+      background-color: $color-rojo-hover;
       transform: translateY(-2px);
     }
   }

@@ -6,6 +6,7 @@
 // 2. Base
 
 @use "base/base";
+@use "base/animaciones";
 @use "base/tipografia";
 
 // 3. Layout
@@ -21,4 +22,4 @@
 @use "components/buttons";
 @use "components/cards";
 @use "components/forms";
-@use "components/media";
+@use "components/media"; 

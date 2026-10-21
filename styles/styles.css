@@ -16,6 +16,30 @@
   border-bottom: 2px solid #1D1D1D;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animar-aparicion {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.card-oferta,
+.card-producto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-oferta:hover,
+.card-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
 .styleandcolorandtypographimain {
   text-decoration: none;
   font-family: "Bebas Neue", sans-serif;
@@ -333,6 +357,12 @@
   padding: 16px;
   background-color: #C8000D;
   text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto-list:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
 .imagen-producto {
@@ -340,6 +370,10 @@
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.producto-list:hover .imagen-producto {
+  transform: scale(1.04);
 }
 
 .productos-contenedor {
@@ -459,7 +493,7 @@
   transition: background-color 0.25s ease, transform 0.15s ease;
 }
 .card-oferta .btn-danger:hover {
-  background-color: rgb(58.431372549%, 0%, 3.7980392157%);
+  background-color: #a0000a;
   transform: translateY(-2px);
 }
 .card-oferta .card-close-btn {
